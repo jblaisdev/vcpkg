@@ -114,7 +114,7 @@ If you do not know the SHA512, add it as 'SHA512 0' and retry.")
         message(FATAL_ERROR "Downloads are disabled, but '${downloaded_file_path}' does not exist.")
     endif()
 
-    vcpkg_list(SET params "x-download" "${arg_FILENAME}")
+    vcpkg_list(SET params "x-download" "${downloaded_file_path}")
     foreach(url IN LISTS arg_URLS)
         vcpkg_list(APPEND params "--url=${url}")
     endforeach()
